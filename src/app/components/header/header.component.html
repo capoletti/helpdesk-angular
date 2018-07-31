@@ -1,5 +1,5 @@
 <header class="main-header">
-  <a href="index2.html" class="logo">
+  <a [routerLink]="['/']" class="logo">
     <span class="logo-mini"><b>HD</b></span>
     <span class="logo-lg"><b>Help Desk</b></span>
   </a>
@@ -9,9 +9,8 @@
       <span class="sr-only">Toggle navigation</span>
     </a>
 
-    <!-- Navbar Right Menu -->
     <div class="navbar-custom-menu">
-      <p style="color:white"> cpoletti@gmail.com | ADMIN |  <button>TESTE</button> </p>
+      <p style="color:white"> {{ shared.user.email}} | {{ shared.user.profile}} |  <button class="btn btn-link" (click)="singOut()"><font style="color:white">sing out</font></button> </p>
     </div>
 
   </nav>

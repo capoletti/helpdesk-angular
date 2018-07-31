@@ -1,3 +1,4 @@
+import { TicketService } from './services/ticket.service';
 import { AuthGuard } from './components/security/auth.guard';
 import { AuthInterceptor } from './components/security/auth.interceptor';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -17,6 +18,10 @@ import { LoginComponent } from './components/security/login/login.component';
 import { UserNewComponent } from './components/user-new/user-new.component';
 import { UserListComponent } from './components/user-list/user-list.component';
 import { DialogService } from './dialog-service';
+import { TicketNewComponent } from './components/ticket-new/ticket-new.component';
+import { TicketListComponent } from './components/ticket-list/ticket-list.component';
+import { TicketDetailComponent } from './components/ticket-detail/ticket-detail.component';
+import { SummaryComponent } from './components/summary/summary.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +32,11 @@ import { DialogService } from './dialog-service';
     HomeComponent,
     LoginComponent,
     UserNewComponent,
-    UserListComponent
+    UserListComponent,
+    TicketNewComponent,
+    TicketListComponent,
+    TicketDetailComponent,
+    SummaryComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +46,7 @@ import { DialogService } from './dialog-service';
   ],
   providers: [
     UserService, 
+    TicketService,
     SharedService,
     DialogService,
     AuthGuard,
