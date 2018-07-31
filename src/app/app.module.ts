@@ -15,6 +15,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/security/login/login.component';
 import { UserNewComponent } from './components/user-new/user-new.component';
+import { UserListComponent } from './components/user-list/user-list.component';
+import { DialogService } from './dialog-service';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { UserNewComponent } from './components/user-new/user-new.component';
     FooterComponent,
     HomeComponent,
     LoginComponent,
-    UserNewComponent
+    UserNewComponent,
+    UserListComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +38,7 @@ import { UserNewComponent } from './components/user-new/user-new.component';
   providers: [
     UserService, 
     SharedService,
+    DialogService,
     AuthGuard,
     {
       provide : HTTP_INTERCEPTORS,
